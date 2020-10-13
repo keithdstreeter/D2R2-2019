@@ -1,0 +1,27 @@
+<ActionBar title="D2R2 Settings" class="action-bar"></ActionBar>
+
+<GridLayout class="page page-content">
+    <ScrollView>
+		<StackLayout orientation="vertical" class ="form">
+			<Label class="text-header" text="Riders, please tell us who you are and select your ride length. Your name will only be used if you send out an emergency notification." textWrap="true"></Label>
+			<!-- <Label text="First Name"></Label><textarea></textarea>
+            <Label text="Last Name"></Label> -->
+
+            <StackLayout class="input-field" orientation="horizontal">
+              <Label text="First Name:"></Label>
+              <TextField [(ngModel)]="firstname" id="firstname" hint="Enter your First Name" autocorrect="false"  (returnPress)="onReturn($event)" class="input-border"></TextField>
+          </StackLayout>
+          <!-- (textChange)="onTextChangeFirst($event)" -->
+          <StackLayout class="input-field" orientation="horizontal">
+              <Label text="Last Name:"></Label>
+              <TextField [(ngModel)]="lastname" id="lastname" #secondTx hint="Enter your Last Name" autocorrect="false"  class="input-border"></TextField>
+          </StackLayout>
+            <!-- (textChange)="onTextChangeLast($event)" -->
+		<StackLayout>
+            <Label class="label" text="Select Your Ride" margin="26 0 0 0" style.textAlignment="center" fontSize="18"></Label>
+            <ListPicker [items]="rideoptions" id="ridePicker" [selectedIndex]="rideselectedindex" (selectedIndexChange)="selectedIndexChanged($event)" class="ridepicker"></ListPicker>
+            <Button text="Save" (tap)="onTap($event)" class="btn btn-primary btn-active"></Button>
+        </StackLayout>
+		</StackLayout>
+	</ScrollView>
+</GridLayout>

@@ -1,0 +1,20 @@
+<ActionBar [title]="ridelength" class="action-bar"></ActionBar>
+
+<GridLayout class="page page-content">
+    <StackLayout class="map-page-wrapper" [class.p-20]="isIOS">
+
+        <!-- <Label class="page-icon fa" text="&#xf015;"></Label>
+        <Label class="page-placeholder" text="D2R2"></Label> -->
+
+        <!-- <ContentView height="100%" width="100%"> -->
+        <ContentView [@flyInOut]="'in'" height="100%" width="100%" [class.map-wrapper]="isIOS">
+            <Mapbox accessToken="pk.eyJ1Ijoia2RzMTAwIiwiYSI6ImNqNXRtcG5hbjFqeGwyd21rYjVkOHZ2M3cifQ.UjT55NR3hZnaSPZa-Kq3Iw" 
+                mapStyle="mapbox.MapStyle.OUTDOORS"
+                latitude="42.6444499" longitude="-72.5876527" hideCompass="true" zoomLevel="11" showUserLocation="true" disableZoom="false"
+                disableRotation="true" disableScroll="false" disableTilt="true" (mapReady)="onMapReady($event)">
+            </Mapbox>
+
+        </ContentView>
+    </StackLayout>
+    <!-- </ContentView> -->
+</GridLayout>

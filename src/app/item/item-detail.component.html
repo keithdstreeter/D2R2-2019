@@ -1,0 +1,63 @@
+<!-- <ActionBar title="Details" class="action-bar"></ActionBar>
+<FlexboxLayout flexDirection="column" class="page">
+    <FlexboxLayout class="m-15">
+        <Label class="h1" [text]="item.id + '. '"></Label>
+        <Label class="h2" [text]="item.name"></Label>
+    </FlexboxLayout>
+    <Label class="h4" [text]="item.role"></Label>
+</FlexboxLayout> -->
+
+<!-- <Page xmlns:Card="@nstudio/nativescript-cardview">
+    <StackLayout>
+       <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
+            <grid-layout rows="200, auto, auto" columns="auto, auto, *">
+                <Label class="h1" [text]="item.id + '. '"></Label>
+                <Label class="h2" [text]="item.name"></Label>
+            </grid-layout>
+        </Card:CardView>
+    </StackLayout>
+ </Page> -->
+
+ <CardView class="cardStyle" margin="10" elevation="40" radius="1">
+    <GridLayout rows="10,30,30,250, auto, auto,10" columns="10,40, *, 30,10">
+     
+      <label
+        class="createdBy text-left"
+        horizontalAlignment="left"
+        [text]="item.id"
+        row="1"
+        col="2"
+        textWrap="true"
+      ></label>
+      <label
+        class="createdOn text-left"
+        horizontalAlignment="left"
+        [text]="item.name"
+        row="2"
+        col="2"
+      ></label>
+      <image
+        [src]="'https://img.youtube.com/vi/'+item.MediaURL+'/mqdefault.jpg'"
+        stretch="aspectFit"
+        colSpan="3"
+        col="1"
+        row="3"
+      ></image>
+      <label
+        horizontalAlignment="left"
+        [text]="item.Title"
+        colSpan="3"
+        row="4"
+        textWrap="true"
+        col="1"
+      ></label>
+      <label
+        horizontalAlignment="left"
+        [text]="item.Summary"
+        textWrap="true"
+        col="1"
+        row="5"
+        colSpan="3"
+      ></label>
+    </GridLayout>
+  </CardView>

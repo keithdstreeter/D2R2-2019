@@ -1,0 +1,67 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Welcome D2R2 Riders!"></Label>
+</ActionBar>
+
+
+<StackLayout>
+        <GridLayout rows="*,auto,auto">
+           <ScrollView>
+             <StackLayout>        
+               <CardView class="cardStyle">
+                   <StackLayout>          
+                     <!-- <Label class="card-header" text="Welcome D2R2 Riders"></Label>           -->
+                     <!-- <Label textWrap="true" text=""></Label> -->
+                     <Image src="res://logo" stretch="aspectFit"></Image>
+                     <!-- <Image src="~/images/d2r2logo25.png" stretch="aspectFit"></Image> -->
+                     ///Users/keith/ns/d18/app/images/d2r2logo25.png
+                   </StackLayout>
+               </CardView>
+               
+             <WrapLayout horizontalAlignment="center">
+                 <CardView radius="5" class="card" width="40%" *ngFor="let item of buttonroutes">
+                   <StackLayout horizontalAlignment="center"  class="card-layout" (tap)="onTappedFun(item)">
+                     
+                     <!-- <Label horizontalAlignment="center" text="Working towards:"></Label> -->
+                     <!-- <Image #instrument></Image> -->
+                     <Label class="icon" horizontalAlignment="center" textWrap="true" [text]="item.iconname"></Label>
+                     <Label horizontalAlignment="center" class="header" [text]="item.title"></Label>
+                   </StackLayout>
+                 </CardView>
+               </WrapLayout>
+             </StackLayout>
+           </ScrollView>
+          </GridLayout> 
+        </StackLayout>
+
+
+<!-- <WrapLayout horizontalAlignment="center">
+    <GridLayout class="page"  columns="*, *" backgroundColor="lightgray">
+
+            <CardView radius="5" class="innerCardStyle" width="40%" *ngFor="let student of studentList">
+
+    <CardView *ngFor="let item of buttonroutes" class="innerCardStyle" margin="10" elevation="40" radius="1" >
+        <StackLayout class="card-layout">
+            <Label class="h2" [text]="item.title"></Label>
+            <Label class="icon"  [text]="item.iconname" (tap)="onTappedDroplet()"></Label>
+        </StackLayout>
+    </CardView>
+</GridLayout>
+</WrapLayout> -->
+   <!-- <GridLayout class="page"  rows="*,auto,auto" backgroundColor="lightgray">
+             
+    <WrapLayout horizontalAlignment="center">
+        <CardView radius="5" class="innerCardStyle" width="40%" *ngFor="let student of studentList">
+          <StackLayout horizontalAlignment="center">
+            <label text="HERE WE GO"  backgroundColor="red"></label>
+
+
+
+            <Label   class="icon"  text="home" (tap)="onTappedHome()"  backgroundColor="blue"></Label>
+        
+            <Label   class="icon"  text="droplet" (tap)="onTappedDroplet()"  backgroundColor="green"></Label>
+        
+            <button text="ButtonTest" class="btn btn-primary btn-active"  backgroundColor="yellow"></button>
+          </StackLayout>
+        </CardView>
+      </WrapLayout>
+</GridLayout>  -->

@@ -1,0 +1,9 @@
+Notes on Prep work required
+
+2019 version using Sheets to prep json from cue
+
+Header Formula (E Row)
+=if(A2 <> "Cue",if(D2 = "","header","instructions"),"colheader")
+
+Data Formula (F Row)
+="{""cue"": """ & A2 & """, ""total"": """ & B2  & """, ""INSTR"": """ & D2  & """, ""isSelected"": false," & " ""itemType"": """ & E2 & """},"

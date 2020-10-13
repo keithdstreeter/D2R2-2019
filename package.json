@@ -1,0 +1,52 @@
+{
+  "nativescript": {
+    "id": "org.franklinlandtrust.d19",
+    "tns-android": {
+      "version": "6.0.0"
+    },
+    "tns-ios": {
+      "version": "6.0.2"
+    }
+  },
+  "description": "D2R2 2019 Rider Cue and Maps",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": {
+    "type": "git",
+    "url": "<fill-your-repository-here>"
+  },
+  "dependencies": {
+    "@angular/animations": "~8.0.0",
+    "@angular/common": "~8.0.0",
+    "@angular/compiler": "~8.0.0",
+    "@angular/core": "~8.0.0",
+    "@angular/forms": "~8.0.0",
+    "@angular/http": "~8.0.0-beta.10",
+    "@angular/platform-browser": "~8.0.0",
+    "@angular/platform-browser-dynamic": "~8.0.0",
+    "@angular/router": "~8.0.0",
+    "@nstudio/nativescript-cardview": "^1.0.0",
+    "nativescript-angular": "~8.0.0",
+    "nativescript-mapbox": "^4.4.1",
+    "nativescript-phone": "^1.4.0",
+    "nativescript-theme-core": "~1.0.4",
+    "reflect-metadata": "~0.1.12",
+    "rxjs": "~6.5.0",
+    "tns-core-modules": "~6.0.0",
+    "webpack-cli": "^3.3.6",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "~8.0.0",
+    "@ngtools/webpack": "~8.0.0",
+    "nativescript-dev-webpack": "~1.0.0",
+    "typescript": "3.4.5"
+  },
+  "author": "Keith Streeter",
+  "name": "d19b",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": []
+}

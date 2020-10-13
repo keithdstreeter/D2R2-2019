@@ -1,0 +1,62 @@
+<ActionBar [title]="ridelength" class="action-bar"></ActionBar>
+
+<ListView [items]="data" separatorColor="transparent" [itemTemplateSelector]="templateSelector">
+
+    <!-- SEGMENT HEADERS -->
+	<ng-template nsTemplateKey="header" let-item="item">
+		<GridLayout >
+			<!-- <StackLayout col="0" class="m-10" height="50" [backgroundColor]="item.color"> -->
+			<!-- </StackLayout> -->
+			<Label col="1" class="courseheader" verticalAlignment="center" [text]="item.cue" textWrap="true"></Label>
+		</GridLayout>
+	</ng-template>
+
+
+    <!-- COLUMN HEADERS - CUE TOTAL INSTR -->
+	<ng-template nsTemplateKey="colheader" let-item="item">
+        <GridLayout columns="2/16*, 2/16*, 12/16*" backgroundColor="lightgreen">
+            <Label col="0" class="coursecolheader" text="Cue" textWrap="false"></Label>
+            <Label col="1" class="coursecolheader" text="Tot" textWrap="false"></Label>
+            <Label col="2" class="coursecolheader" text="Instruction" textWrap="false"></Label>
+        </GridLayout>
+    </ng-template>
+
+    <!-- Individual Instructions - Turns, Roads -->
+    <ng-template nsTemplateKey="instructions" let-item="item">
+        <GridLayout rows="*,6" columns="2/16*, 2/16*, 12/16*"  (tap)="onTapSetSelected(item)">
+            <Label row="0" col="0" [text]="item.cue" textWrap="false" [class]="item.isSelected ? 'ride-cue-completed' : 'ride-cue-item'"></Label>
+            <Label row="0" col="1" [text]="item.total" textWrap="false" [class]="item.isSelected ? 'ride-cue-completed' : 'ride-cue-item'"></Label>
+            <Label row="0" col="2" [text]="item.INSTR" textWrap="true" [class]="item.isSelected ? 'ride-cue-completed' : 'ride-cue-item'"></Label>
+            <Label row="1" colspan="3" class="cueline"></Label>
+        </GridLayout>
+        <!-- <StackLayout><label class="cueline">TEXT</label></StackLayout> -->
+        
+    </ng-template>
+
+</ListView>
+
+<!-- columns="1/4*, 3/4*" -->
+
+<!-- class="h3 text-center p-10 instructions"  backgroundColor="lightgreen" -->
+
+<!-- <ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Browse"></Label>
+</ActionBar>
+
+
+<StackLayout sdkExampleTitle sdkToggleNavButton>
+    <GridLayout>
+        <ListView [items]="myItems | async" class="list-group">
+            <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+                <GridLayout class="list-group-item" [class.odd]="odd" [class.even]="even">
+                    <Label [text]="item.name" android:class="label-item"></Label>
+                </GridLayout>
+            </ng-template>
+        </ListView>
+    </GridLayout>
+</StackLayout> -->
+
+<!-- <GridLayout class="page page-content">
+    <Label class="page-icon fa" text="&#xf1ea;"></Label>
+    <Label class="page-placeholder" text="COURSE"></Label>
+</GridLayout> -->
